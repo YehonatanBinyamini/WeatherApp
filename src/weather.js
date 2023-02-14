@@ -12,6 +12,11 @@ const Weather = () => {
   const [weather, setWeather] = useState({});
 
   const API_key = '84264889e9d28801656205f42feb4293';
+
+  useEffect(() => {
+    document.title = "Weather App";
+  }, []);
+
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(`https://api.openweathermap.org/data/2.5/weather?lat=10.34&lon=10.99&appid=${API_key}`);
