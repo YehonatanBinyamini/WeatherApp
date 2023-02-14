@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Weather.css';
+import { API_key } from './private';
 
 function fahrenheitToCelsius(fahrenheit) {
     const celsius = (fahrenheit - 32) * 5 / 9;
@@ -11,7 +12,6 @@ const Weather = () => {
   const [city, setCity] = useState('Tel Aviv');
   const [weather, setWeather] = useState({});
 
-  const API_key = '84264889e9d28801656205f42feb4293';
 
   useEffect(() => {
     document.title = "Weather App";
